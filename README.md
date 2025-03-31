@@ -9,6 +9,9 @@
 - Matplotlib : ``3.10.1``
 - Numpy : ``2.1.3``
 
+## README 파일
+- 모든 ``.md`` 파일은 ``코드 설명``, ``코드의 의도`` 등을 **설명하기 위해서** 작성 됐기 때문에, ``.ipynb``과 같이 읽으면 좋습니다.
+
 ## 강의 사이트
 - [전문가를 위한 TensorFlow 2 빠른시작](https://www.tensorflow.org/tutorials/quickstart/advanced?hl=ko)
 
