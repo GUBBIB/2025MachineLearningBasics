@@ -1,5 +1,26 @@
 # 코드 설명
 
+## keras
+### keras란?
+keras는 Python으로 구현된 쉽고 간결한 딥러닝 라이브러이다.
+
+### keras를 사용하는 이유
+1. 모듈화가 가능하다.
+2. 간결하며 이해하기가 쉽다.
+3. 새로운 클래스나 함수로 모듈을 쉽게 확장할 수 있다.
+
+### keras 라이브러리의 모듈
+이 챕터에서 사용하는 모듈은 ``datasets``, ``layers``, ``models`` 3가지이다.
+
+- **dataset** : 딥러닝 모델을 학습시키기 위한 데이터셋을 제공하는 모듈로 ``CIFAR10``, ``MINIST`` 가 있다.<br>
+이 챕터에서는 ``datasets.cifar10.load_data()``를 통해서 ``CIFAR10`` 데이터셋을 로드한다.
+
+※ ``CIFAR10`` 데이터셋은 10개의 클래스(자동차, 비행기, 고양이, 강아지 등)로 분류된 ``32X32`` 크기의 컬러(RGB) 이미지 데이터셋이다.
+
+
+## 참고
+- [[Keras & Tensorfow] 개념](https://golikeriver97.tistory.com/41)
+
 <!-- 
 ```python
 model = models.Sequential()
