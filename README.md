@@ -2,6 +2,7 @@
 2025년 1학기 머신러닝기초 강의 내용을 작성하는 곳 입니다.
 
 ## 개발 환경
+- IDE : ``Jupyter Notebook``
 - Python : ``3.10.10``
 - Jupyter Notebook : ``7.3.3``
 - tensorflow : ``2.19.0``
