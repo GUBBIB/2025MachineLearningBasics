@@ -5,8 +5,8 @@
 - IDE : ``Jupyter Notebook``
 - Python : ``3.10.10``
 - Jupyter Notebook : ``7.3.3``
-- tensorflow : ``2.19.0``
-
+- Tensorflow : ``2.19.0``
+- Matplotlib : ``3.10.1``
 
 ## 강의 사이트
 - [전문가를 위한 TensorFlow 2 빠른시작](https://www.tensorflow.org/tutorials/quickstart/advanced?hl=ko)
