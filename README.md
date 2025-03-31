@@ -1,6 +1,9 @@
 # 2025MachineLearningBasics
 2025년 1학기 머신러닝기초 강의 내용을 작성하는 곳 입니다.
 
+## README 파일
+- 모든 ``.md`` 파일은 ``코드 설명``, ``코드의 의도`` 등을 **설명하기 위해서** 작성 됐기 때문에, ``.ipynb``과 같이 읽으면 좋습니다.
+
 ## 개발 환경
 - Tools : ``Jupyter Notebook``
 - Python : ``3.10.10``
@@ -8,9 +11,6 @@
 - Tensorflow : ``2.19.0``
 - Matplotlib : ``3.10.1``
 - Numpy : ``2.1.3``
-
-## README 파일
-- 모든 ``.md`` 파일은 ``코드 설명``, ``코드의 의도`` 등을 **설명하기 위해서** 작성 됐기 때문에, ``.ipynb``과 같이 읽으면 좋습니다.
 
 ## 강의 사이트
 - [전문가를 위한 TensorFlow 2 빠른시작](https://www.tensorflow.org/tutorials/quickstart/advanced?hl=ko)
