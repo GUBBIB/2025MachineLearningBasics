@@ -2,11 +2,12 @@
 2025년 1학기 머신러닝기초 강의 내용을 작성하는 곳 입니다.
 
 ## 개발 환경
-- IDE : ``Jupyter Notebook``
+- Tools : ``Jupyter Notebook``
 - Python : ``3.10.10``
 - Jupyter Notebook : ``7.3.3``
 - Tensorflow : ``2.19.0``
 - Matplotlib : ``3.10.1``
+- Numpy : ``2.1.3``
 
 ## 강의 사이트
 - [전문가를 위한 TensorFlow 2 빠른시작](https://www.tensorflow.org/tutorials/quickstart/advanced?hl=ko)
