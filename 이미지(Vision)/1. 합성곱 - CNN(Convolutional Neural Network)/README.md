@@ -1,7 +1,9 @@
 # 코드 설명
 
-## 텐서란?
+## 텐서(Tensor)란?
 ![Image](https://github.com/user-attachments/assets/cd931f32-4465-493b-ad7b-d5286c064649)
+- **텐서(Tensor)** 는 쉽게 말해서 ``다차원 배열`` 이다.
+- **텐서(Tensor)** 는 ``벡터(Vector)``와 ``행렬(Matrix)``을 **일반화** 한 것이며, ``3차원`` 이상으로 확장할 수 있다.
 
 ## keras
 ### keras란?
@@ -36,6 +38,7 @@
   - [Dense(완전 연결 레이어)](https://github.com/GUBBIB/2025MachineLearningBasics/blob/main/%EC%9D%B4%EB%AF%B8%EC%A7%80(Vision)/1.%20%ED%95%A9%EC%84%B1%EA%B3%B1%20-%20CNN(Convolutional%20Neural%20Network)/Doc/Dense(%EC%99%84%EC%A0%84%20%EC%97%B0%EA%B2%B0%20%EB%A0%88%EC%9D%B4%EC%96%B4).md) : ``Conv2D``, ``MaxPooling2D`` 로 추출한 특징들을 하나로 모아서, 최종적인 판단이나 예측을 내리는 함수이다.
 
 ## 참고
+- [1. 텐서 기초 살펴보기](https://codetorial.net/tensorflow/basics_of_tensor.html) - 텐서란?
 - [[Keras & Tensorfow] 개념](https://golikeriver97.tistory.com/41) - keras에 대해서
 
 <!-- 
