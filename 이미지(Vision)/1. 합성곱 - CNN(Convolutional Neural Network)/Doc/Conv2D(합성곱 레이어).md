@@ -83,7 +83,7 @@ tf.keras.layers.Conv2D(
     <img src="https://github.com/user-attachments/assets/46fa0f31-8a1c-4a1e-9217-6e24b35a8c4e" width="500px" height="500px">
 
 
-    위의 사진을 예로 보자면 각 필터마다 
+    ※ 위의 그래프처럼 출력값을 ``위/아래`` 로 밀어줌으로써 **단순한 선형 패턴** 에서 **비선형적인 패턴** 으로 학습을 할 수 있게 해준다.
 
         
     
