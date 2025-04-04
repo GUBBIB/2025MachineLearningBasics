@@ -30,7 +30,7 @@
 
     - 크기를 줄이기 때문에 **계산량**도 줄고, **과적합** 도 막아준다.
 
-  - [Dense(완전 연결 레이어)](https://github.com/GUBBIB/2025MachineLearningBasics/blob/main/%EC%9D%B4%EB%AF%B8%EC%A7%80(Vision)/1.%20%ED%95%A9%EC%84%B1%EA%B3%B1%20-%20CNN(Convolutional%20Neural%20Network)/Doc/Dense(%EC%99%84%EC%A0%84%20%EC%97%B0%EA%B2%B0%20%EB%A0%88%EC%9D%B4%EC%96%B4).md) : 앞에서 추출한 특징들을 하나로 모아서, 최종적인 판단이나 예측을 내리는 함수이다.
+  - [Dense(완전 연결 레이어)](https://github.com/GUBBIB/2025MachineLearningBasics/blob/main/%EC%9D%B4%EB%AF%B8%EC%A7%80(Vision)/1.%20%ED%95%A9%EC%84%B1%EA%B3%B1%20-%20CNN(Convolutional%20Neural%20Network)/Doc/Dense(%EC%99%84%EC%A0%84%20%EC%97%B0%EA%B2%B0%20%EB%A0%88%EC%9D%B4%EC%96%B4).md) : ``Conv2D``, ``MaxPooling2D`` 로 추출한 특징들을 하나로 모아서, 최종적인 판단이나 예측을 내리는 함수이다.
 
 ## 참고
 - [[Keras & Tensorfow] 개념](https://golikeriver97.tistory.com/41) - keras에 대해서
