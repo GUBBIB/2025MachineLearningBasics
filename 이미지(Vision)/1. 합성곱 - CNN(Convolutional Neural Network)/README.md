@@ -1,7 +1,8 @@
 # 코드 설명
 
 ## 텐서란?
-<img src="https://github.com/user-attachments/assets/cd931f32-4465-493b-ad7b-d5286c064649" width="100%" height="100px">
+<img src="https://github.com/user-attachments/assets/cd931f32-4465-493b-ad7b-d5286c064649" width="100%" height="500px">
+
 ![Image](https://github.com/user-attachments/assets/cd931f32-4465-493b-ad7b-d5286c064649)
 
 ## keras
