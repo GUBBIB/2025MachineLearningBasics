@@ -25,9 +25,9 @@
   - [Conv2D(합성곱 레이어)](https://github.com/GUBBIB/2025MachineLearningBasics/blob/main/%EC%9D%B4%EB%AF%B8%EC%A7%80(Vision)/1.%20%ED%95%A9%EC%84%B1%EA%B3%B1%20-%20CNN(Convolutional%20Neural%20Network)/Doc/Conv2D(%ED%95%A9%EC%84%B1%EA%B3%B1%20%EB%A0%88%EC%9D%B4%EC%96%B4).md) : 2D 합성곱 레이어를 만든다.
     - 이미지에서 ``특징(feature)`` 을 추출하는 역할을 하며 ``필터(커널)`` 을 이용해 이미지에서 ``중요한 패턴``을 감지한다.<br>
     - 필터를 거쳐서 나온 값이 클수록 특징이 뚜렷하다는 의미이다.
-    
+
   - ``MaxPooling2D(최대 풀링 레이어)`` : 주로 Conv2D 함수 뒤에 사용되며, 추출한 특징은 유지하면서 크기는 줄이는 함수이다.
-    -
+    - d
 
   - ``Dense(완전 연결 레이어)`` : 
 
