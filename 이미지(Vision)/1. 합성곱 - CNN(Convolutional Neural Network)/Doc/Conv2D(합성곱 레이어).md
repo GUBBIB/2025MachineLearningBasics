@@ -80,7 +80,11 @@ tf.keras.layers.Conv2D(
     - 바이어스 예시 사진
         - ``빨간 실선 = 바이어스가 3인 경우``, ``파란색 점선 = 바이어스가 없는 경우``
     
+    <img src="https://github.com/user-attachments/assets/46fa0f31-8a1c-4a1e-9217-6e24b35a8c4e">
+    
     ![바이어스 예시 사진](https://github.com/user-attachments/assets/46fa0f31-8a1c-4a1e-9217-6e24b35a8c4e)
+
+    위의 사진을 예로 보자면 각 필터마다 
 
         
     
