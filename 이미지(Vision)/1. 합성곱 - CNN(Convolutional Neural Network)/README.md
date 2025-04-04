@@ -1,5 +1,9 @@
 # 코드 설명
 
+## 텐서란?
+<img src="https://github.com/user-attachments/assets/cd931f32-4465-493b-ad7b-d5286c064649" width="100%" height="100px">
+![Image](https://github.com/user-attachments/assets/cd931f32-4465-493b-ad7b-d5286c064649)
+
 ## keras
 ### keras란?
 **keras**는 ``Python`` 으로 구현된 **쉽고 간결한 딥러닝 라이브러리**이다.
