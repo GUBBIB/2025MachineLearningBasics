@@ -100,5 +100,8 @@ tf.keras.layers.Conv2D(
     ※ ``zeros`` 말고도 ``ones``, ``random_normal`` 등 여러가지가 있지만 실험적 설정 또는 특수한 상황이 아닌경우는 전부 다 ``zeros``를 사용한다.
 
 *****
-- ``input_shape=None`` :
+- ``input_shape=None`` : ``input_shape=(Height, Weight, Channels)`` 형태로 입력 이미지의 크기와 이미지 채널 개수를 등록한다. <br>
+    - 첫번째 레이어에서만 사용을 한다.
+
+    ※ 하지만 Conv2D 레이어에서 같이 shape을 지정하는 것 보다 ``layer.Import`` 객체를 사용하는 것이 **권장**된다.
 *****
