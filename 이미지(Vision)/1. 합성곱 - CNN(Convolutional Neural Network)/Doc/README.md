@@ -1,0 +1,1 @@
+- [tset](https://github.com/GUBBIB/2025MachineLearningBasics/blob/main/%EC%9D%B4%EB%AF%B8%EC%A7%80(Vision)/1.%20%ED%95%A9%EC%84%B1%EA%B3%B1%20-%20CNN(Convolutional%20Neural%20Network)/Doc/Conv2D(%ED%95%A9%EC%84%B1%EA%B3%B1%20%EB%A0%88%EC%9D%B4%EC%96%B4).md)
