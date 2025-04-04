@@ -30,7 +30,10 @@ tf.keras.layers.Conv2D(
 - ``strides=(1, 1)`` : 필터(커널)가 움직이는 보폭이다.
     - **필터(커널)** 의 크기가 클수록 **출력 크기가 작아지고** **계산량도 줄어**든다. 하지만 ``MaxPooling2D 연산`` 으로 크기를 줄이기 때문에 보통 기본값인 ``(1, 1)`` 을  사용한다.
 
-- ``padding='valid'`` :
+- ``padding='valid'`` : 가장자리를 어떻게 처리할지 정한다.
+    - ``same`` : 가장자리에 0을 추가해서 필터(커널)가 연산을 가장자리까지 할 수 있게 해준다.
+    - ``vaild``: 
+
 - ``activation=None`` :
 - ``use_bias=True`` :
 - ``kernel_initializer='glorot_uniform'`` :
