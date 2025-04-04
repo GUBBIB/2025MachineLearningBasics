@@ -87,10 +87,18 @@ tf.keras.layers.Conv2D(
 
     ※ 위의 그래프처럼 출력값을 각 필터마다 ``위/아래`` 로 밀어줌으로써 **단순한 선형 패턴** 에서 **비선형적인 패턴** 으로 학습을 할 수 있게 해준다.<br>
     
-
-        
-    
 *****
-- ``kernel_initializer='glorot_uniform'`` :
-- ``bias_initializer='zeros'`` :
+- ``kernel_initializer='glorot_uniform'`` : **필터(커널)** 의 ``가중치``의 **초기값**을 정한다.
+    - ``glorot_uniform``이 기본값으로 **Xavier 초기화** 라고부르며, **균등분포** 기반으로 적적히 분산된 값으로 초기화한다.
+    
+    ※ 이외에 ``정규분포 기반``, ``균등분포 기반`` 등 여러가지가 있지만 특수한 상황이 아닌경우는 전부 다 ``glorot_uniform``을 사용한다.
+
+*****
+- ``bias_initializer='zeros'`` : 바이어스의 초기값을 정한다.
+    - ``zeros``는 모든 바이어스의 초기값을 0으로 초기화시킨다.
+    
+    ※ ``zeros`` 말고도 ``ones``, ``random_normal`` 등 여러가지가 있지만 실험적 설정 또는 특수한 상황이 아닌경우는 전부 다 ``zeros``를 사용한다.
+
+*****
 - ``input_shape=None`` :
+*****
