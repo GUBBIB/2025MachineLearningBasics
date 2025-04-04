@@ -79,8 +79,9 @@ tf.keras.layers.Conv2D(
 
     - 바이어스 예시 사진
     ![바이어스 예시 사진](https://github.com/user-attachments/assets/46fa0f31-8a1c-4a1e-9217-6e24b35a8c4e)
-    
-     ``(입력값 x 가중치) + 바이어스값`` 
+
+        - 빨간 실선 = 바이어스가 3인 경우
+        - 파란색 점선 = 바이어스가 없는 경우
     
 *****
 - ``kernel_initializer='glorot_uniform'`` :
