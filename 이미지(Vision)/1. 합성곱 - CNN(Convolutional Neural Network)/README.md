@@ -2,6 +2,7 @@
 
 ## 텐서(Tensor)란?
 ![Image](https://github.com/user-attachments/assets/cd931f32-4465-493b-ad7b-d5286c064649)
+<img width="899" alt="Image" src="https://github.com/user-attachments/assets/328e29c7-41cb-43b6-a63a-1f19f21dfe4a" />
 - **텐서(Tensor)** 는 쉽게 말해서 ``다차원 배열`` 이다.
 - **텐서(Tensor)** 는 ``벡터(Vector)``와 ``행렬(Matrix)``을 **일반화** 한 것이며, ``3차원`` 이상으로 확장할 수 있다.
 
