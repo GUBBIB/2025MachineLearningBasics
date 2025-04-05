@@ -6,6 +6,8 @@
 
     - 크기를 줄이기 때문에 **계산량**도 줄고, **과적합** 도 막아준다.
 
+<img width="640" alt="Image" src="https://github.com/user-attachments/assets/2c9f1412-0f3b-4ec0-9e69-9bffcd941b1e" />
+
 <img src="https://github.com/user-attachments/assets/1a8fcd21-2169-4f9c-a66a-e2db5ee76901" widht="1000px" height="500px">
 
 ## 형식
