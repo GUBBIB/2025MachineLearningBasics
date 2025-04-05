@@ -8,8 +8,6 @@
 
 <img width="640" alt="Image" src="https://github.com/user-attachments/assets/2c9f1412-0f3b-4ec0-9e69-9bffcd941b1e" />
 
-<img src="https://github.com/user-attachments/assets/1a8fcd21-2169-4f9c-a66a-e2db5ee76901" widht="1000px" height="500px">
-
 ## 형식
 ```python
 tf.keras.layers.MaxPooling2D(
@@ -19,7 +17,8 @@ tf.keras.layers.MaxPooling2D(
 )
 ```
 *****
-- ``pool_size=(2, 2)`` : 
+- ``pool_size=(2, 2)`` : ``풀링(pooling)영역``의 크기를 정한다.
+    - 보통 ``(2, 2)``정도의 크기를 사용해서 이미지의 크기를 **절반으로** 줄인다.
 
 *****
 - ``strides=none`` :
@@ -28,3 +27,6 @@ tf.keras.layers.MaxPooling2D(
 - ``padding='valid'`` :
 
 *****
+
+## 참고
+- [폴링 계층, Pooling Layer](https://dsbook.tistory.com/79) - 풀링 예시 이미지
