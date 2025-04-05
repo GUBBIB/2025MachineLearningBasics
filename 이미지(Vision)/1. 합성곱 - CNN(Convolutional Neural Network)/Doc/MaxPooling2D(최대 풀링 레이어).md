@@ -6,8 +6,7 @@
 
     - 크기를 줄이기 때문에 **계산량**도 줄고, **과적합** 도 막아준다.
 
-![Image](https://github.com/user-attachments/assets/1a8fcd21-2169-4f9c-a66a-e2db5ee76901)
-
+<img src="https://github.com/user-attachments/assets/1a8fcd21-2169-4f9c-a66a-e2db5ee76901" widht="1000px" height="500px">
 
 ## 형식
 ```python
