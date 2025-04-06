@@ -7,8 +7,19 @@
 
 ## 작동 방식
 ```python
-class_name = ['airplane', 'automobile', 'bird', 'cat', 'deer',
-               'dog', 'frog', 'horse', 'ship', 'truck']
+# 예측해야 할 클래스가 다음과 같다고 해보자
+class_names = ["고양이", "강아지", "토끼"]
+
+# Dense 레이어의 출력값이 아래와 같다면:
+output = [0.1, 0.7, 0.2]
+
+# 해석:
+# 고양이일 확률: 0.1
+# 강아지일 확률: 0.7 ✅ (가장 높음)
+# 토끼일 확률: 0.2
+
+predicted_index = np.argmax(output)        # → 1
+predicted_label = class_names[1]           # → "강아지"
 ```
 
 ## 형식
