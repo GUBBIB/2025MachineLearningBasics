@@ -19,7 +19,7 @@ output = [0.1, 0.7, 0.2]
 # 토끼일 확률: 0.2
 
 predicted_index = np.argmax(output)        # → 1
-predicted_label = class_names[1]           # → "강아지"
+predicted_label = class_names[predicted_index]           # → "강아지"
 ```
 
 ## 형식
