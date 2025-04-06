@@ -45,10 +45,11 @@
   - [Dense(완전 연결 레이어)](https://github.com/GUBBIB/2025MachineLearningBasics/blob/main/%EC%9D%B4%EB%AF%B8%EC%A7%80(Vision)/1.%20%ED%95%A9%EC%84%B1%EA%B3%B1%20-%20CNN(Convolutional%20Neural%20Network)/Doc/Dense(%EC%99%84%EC%A0%84%20%EC%97%B0%EA%B2%B0%20%EB%A0%88%EC%9D%B4%EC%96%B4).md) : ``Conv2D``, ``MaxPooling2D`` 로 추출한 특징들을 하나로 모아서, 최종적인 판단이나 예측을 내리는 함수이다.
     - 예를들어 ``CNN``에서 **고양이/강아지**를 구분하는 문제에서 ``Dense 레이어`` 가 **특징**들을 보고 **"이건 고양이다!"** 라고 ``결정``을 내리는 부분이다.
 
-## 데이터 로드 
-```python
-(train_images, train_labels), (test_images, test_labels) = datasets.cifar10.load_data()
-```
+## 데이터셋 다운로드
+datasets.cifar10.load_data()로 load해온 데이터
+|항목|설명|데이터 수|형태(shape)|
+|-|-|-|-|
+|``train_images``|학습용 이미지|``50,000개``|``(50000, 32, 32, 3)``|
 
 ## 참고
 - [1. 텐서 기초 살펴보기](https://codetorial.net/tensorflow/basics_of_tensor.html) - 텐서에 대해서
