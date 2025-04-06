@@ -51,6 +51,7 @@
 - [1. 텐서 기초 살펴보기](https://codetorial.net/tensorflow/basics_of_tensor.html) - 텐서에 대해서
 - [[Pytorch]텐서의 정의](https://meaningful96.github.io/pytorch/pytorch1/) - 텐서 설명 이미지
 - [[Keras & Tensorfow] 개념](https://golikeriver97.tistory.com/41) - keras에 대해서
+- [CNN: Step 3— Flattening](https://medium.com/@PK_KwanG/cnn-step-2-flattening-50ee0af42e3e) - CNN 데이터 흐름
 
 <!-- 
 ```python

@@ -11,3 +11,6 @@
 ```python
 tf.keras.layers.Flatten()
 ```
+
+## 참고
+[CNN: Step 3— Flattening](https://medium.com/@PK_KwanG/cnn-step-2-flattening-50ee0af42e3e) - Flatten 작동 방식
