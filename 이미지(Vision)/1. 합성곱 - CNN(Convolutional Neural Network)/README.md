@@ -60,6 +60,7 @@
 train_images, test_images = train_images / 255.0, test_images / 255.0
 ```
 
+
 ### ``class_names``이 필요한 이유
 ```python
 class_names = ['airplane', 'automobile', 'bird', 'cat', 'deer',
