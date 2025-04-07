@@ -1,4 +1,4 @@
-# MachineLearningBasics
+# MachineLearningBasics_TensorFlow
 TensorFlow 공식 튜토리얼을 기반으로 공부한 자료를 올리는 곳입니다.
 
 ## README 파일
