@@ -109,17 +109,6 @@ class_names = ['airplane', 'automobile', 'bird', 'cat', 'deer',
 | dense (Dense)             | (None, 64)           |   65,600 |
 | dense_1 (Dense)           | (None, 10)           |      650 |
 
-| Layer (type)              | Output Shape         | Param #  |
-|:-------------------------:|:--------------------:|:--------:|
-| conv2d_3 (Conv2D)         | (None, 30, 30, 32)   |   896    |
-| max_pooling2d_2 (MaxPooling2D) | (None, 15, 15, 32)   |    0     |
-| conv2d_4 (Conv2D)         | (None, 13, 13, 64)   | 18,496   |
-| max_pooling2d_3 (MaxPooling2D) | (None, 6, 6, 64)     |    0     |
-| conv2d_5 (Conv2D)         | (None, 4, 4, 64)     | 36,928   |
-| flatten (Flatten)         | (None, 1024)         |    0     |
-| dense (Dense)             | (None, 64)           | 65,600   |
-| dense_1 (Dense)           | (None, 10)           |   650    |
-
 
 
 
