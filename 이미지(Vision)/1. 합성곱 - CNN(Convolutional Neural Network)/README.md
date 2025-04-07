@@ -91,7 +91,9 @@ class_names = ['airplane', 'automobile', 'bird', 'cat', 'deer',
 | 8         | ship          |
 | 9         | truck         |
 
-
+## 합성곱 층 만들기
+- 이 챕터에서 **합성곱 층** 은 ``Conv2D``, ``MaxPooling2D``, ``Flatten``, ``Dense`` 등을 사용해서 **Sequential 모델** 에 층을 쌓는 작업을 한다.
+- 이는 이미지로부터 **특징**을 ``추출`` 하고, 최종적으로 **분류 작업** 을 할 수 있도록 **모델의 구조**를 ``정의`` 하는 곳이다.
 ## 참고
 - [1. 텐서 기초 살펴보기](https://codetorial.net/tensorflow/basics_of_tensor.html) - 텐서에 대해서
 - [[Pytorch]텐서의 정의](https://meaningful96.github.io/pytorch/pytorch1/) - 텐서 설명 이미지
