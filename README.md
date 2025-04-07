@@ -1,5 +1,5 @@
-# 2025MachineLearningBasics
-2025년 1학기 머신러닝기초 강의 내용을 작성하는 곳 입니다.
+# MachineLearningBasics
+TensorFlow 공식 튜토리얼을 기반으로 공부한 자료를 올리는 곳입니다.
 
 ## README 파일
 - 모든 ``.md`` 파일은 ``코드 설명``, ``코드의 의도`` 등을 **설명하기 위해서** 작성 됐기 때문에 ``.ipynb`` 파일과 같이 읽으면 좋습니다.
