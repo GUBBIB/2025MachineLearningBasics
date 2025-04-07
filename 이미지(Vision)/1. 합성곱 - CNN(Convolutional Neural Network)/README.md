@@ -110,7 +110,10 @@ class_names = ['airplane', 'automobile', 'bird', 'cat', 'deer',
 | dense_1 (Dense)           | (None, 10)           |      650 |
 
 
-
+- Param 계산 식
+```
+(filter_height * filter_width * 입력 채널 수 + bias(편향)) * 출력 채널 수
+```
 
 
 
