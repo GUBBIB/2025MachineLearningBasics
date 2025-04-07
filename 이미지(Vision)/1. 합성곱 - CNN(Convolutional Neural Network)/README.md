@@ -55,6 +55,11 @@
 |``test_images``|테스트용 이미지|``10,000개``|``(10000, 32, 32, 3)``|
 |``test_labels``|테스트용 이미지의 라벨|``10,000개``|``(10000, 1)``|
 
+### images를 255로 나누는 이유
+```python
+train_images, test_images = train_images / 255.0, test_images / 255.0
+```
+
 ### ``class_names``이 필요한 이유
 ```python
 class_names = ['airplane', 'automobile', 'bird', 'cat', 'deer',
