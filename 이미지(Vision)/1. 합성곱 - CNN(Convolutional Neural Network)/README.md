@@ -59,7 +59,7 @@
 ```python
 train_images, test_images = train_images / 255.0, test_images / 255.0
 ```
-
+- **images**는 ``1차원(흑백) 데이터`` 와 ``3차원(RGB) 데이터``가 있는데, 이 값이 ``0 ~ 255`` 로 너무커서 ``0 ~ 1`` 사이의 값으로 ``정규화``를 해줘야 하기 때문이다.
 
 ### ``class_names``이 필요한 이유
 ```python
