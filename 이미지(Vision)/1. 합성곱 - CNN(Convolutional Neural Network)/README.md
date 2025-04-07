@@ -27,8 +27,9 @@
 **※ ``CIFAR10`` 데이터셋은 10개의 **클래스/객체** (자동차, 비행기, 고양이, 강아지 등)로 분류된 ``32x32`` 크기의 **컬러(RGB)** 이미지 데이터셋이다.**
 
 - **models** : 딥러닝 모델을 ``구성`` 하고 ``학습`` 하는데 필요한 **고수준 API** 를 제공하는 모듈이다.<br>
-  - ``Sequential`` : **레이어**를 한줄의 **층의 형태**로 **순차적(직선적)으로 쌓는 모델**이다.
-  - ``Model`` : **다중입력** , **다중출력** 이 가능해서 **Sequential** 보다 ``유연한/복잡한`` 구조를 설계할 수 있다.
+  - ``Sequential()`` : **레이어**를 한줄의 **층의 형태**로 **순차적(직선적)으로 쌓는 모델**이다.
+  - ``Model()`` : **다중입력** , **다중출력** 이 가능해서 **Sequential** 보다 ``유연한/복잡한`` 구조를 설계할 수 있다.
+  - ``summary()`` : 
 
 - **layers** : 딥러닝 모델을 구성하는 다양한 ``기본적인 층``을 제공하는 모듈이다.
   - [Conv2D(합성곱 레이어)](https://github.com/GUBBIB/2025MachineLearningBasics/blob/main/%EC%9D%B4%EB%AF%B8%EC%A7%80(Vision)/1.%20%ED%95%A9%EC%84%B1%EA%B3%B1%20-%20CNN(Convolutional%20Neural%20Network)/Doc/layers/Conv2D(%ED%95%A9%EC%84%B1%EA%B3%B1%20%EB%A0%88%EC%9D%B4%EC%96%B4).md) : 2D 합성곱 레이어를 만든다.
@@ -94,6 +95,36 @@ class_names = ['airplane', 'automobile', 'bird', 'cat', 'deer',
 ## 합성곱 층 만들기
 - 이 챕터에서 **합성곱 층** 은 ``Conv2D``, ``MaxPooling2D``, ``Flatten``, ``Dense`` 등을 사용해서 **Sequential 모델** 에 층을 쌓는 작업을 한다.
 - 이는 이미지로부터 **특징**을 ``추출`` 하고, 최종적으로 **분류 작업** 을 할 수 있도록 **모델의 구조**를 ``정의`` 하는 곳이다.
+
+### 출력된 표의 의미
+
+| Layer (type)              | Output Shape         | Param #  |
+|---------------------------|----------------------|----------|
+| conv2d_3 (Conv2D)         | (None, 30, 30, 32)   |      896 |
+| max_pooling2d_2 (MaxPooling2D) | (None, 15, 15, 32)   |        0 |
+| conv2d_4 (Conv2D)         | (None, 13, 13, 64)   |   18,496 |
+| max_pooling2d_3 (MaxPooling2D) | (None, 6, 6, 64)     |        0 |
+| conv2d_5 (Conv2D)         | (None, 4, 4, 64)     |   36,928 |
+| flatten (Flatten)         | (None, 1024)         |        0 |
+| dense (Dense)             | (None, 64)           |   65,600 |
+| dense_1 (Dense)           | (None, 10)           |      650 |
+
+| Layer (type)              | Output Shape         | Param #  |
+|:-------------------------:|:--------------------:|:--------:|
+| conv2d_3 (Conv2D)         | (None, 30, 30, 32)   |   896    |
+| max_pooling2d_2 (MaxPooling2D) | (None, 15, 15, 32)   |    0     |
+| conv2d_4 (Conv2D)         | (None, 13, 13, 64)   | 18,496   |
+| max_pooling2d_3 (MaxPooling2D) | (None, 6, 6, 64)     |    0     |
+| conv2d_5 (Conv2D)         | (None, 4, 4, 64)     | 36,928   |
+| flatten (Flatten)         | (None, 1024)         |    0     |
+| dense (Dense)             | (None, 64)           | 65,600   |
+| dense_1 (Dense)           | (None, 10)           |   650    |
+
+
+
+
+
+
 ## 참고
 - [1. 텐서 기초 살펴보기](https://codetorial.net/tensorflow/basics_of_tensor.html) - 텐서에 대해서
 - [[Pytorch]텐서의 정의](https://meaningful96.github.io/pytorch/pytorch1/) - 텐서 설명 이미지
