@@ -115,8 +115,8 @@ class_names = ['airplane', 'automobile', 'bird', 'cat', 'deer',
 - 해당 층에서 **학습 과정 중에 조정되는 값(가중치 + 편향)의 총 개수** 를 의미한다.
 
 #### Conv2D 레이어의 Param 계산
-##### Conv2D 레이어의 Param 계산 식
-```
+```python
+# Conv2D 레이어의 Param 계산 식
 (filter_height * filter_width * 입력 채널 수 + bias(편향)) * 출력 채널 수
 ```
 ```python
@@ -130,8 +130,10 @@ class_names = ['airplane', 'automobile', 'bird', 'cat', 'deer',
 - 마지막으로, ``출력 채널 개수`` 를 **곱해주면**  해당 층에서 **조정되는 가중치와 편향의 총 개수(Param 수)** 가 계산된다. ``※ (289 * 64 = 18,496개)``
 
 #### Dense 레이어의 Param 계산
-##### Dense 레이어의 Param 계산식
-- ``(입력 채널 수 + 1) * 출력 채널 수``
+```python
+# Dense 레이어의 Param 계산식
+(입력 채널 수 + 1) * 출력 채널 수
+```
 
 #### 주의
 - ``MaxPooling2D 레이어``는 **이미지의 크기를 줄이는 레이어**이기 때문에 **Param**이 0이다.
