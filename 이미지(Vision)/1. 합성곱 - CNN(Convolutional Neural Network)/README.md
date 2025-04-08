@@ -135,6 +135,7 @@ class_names = ['airplane', 'automobile', 'bird', 'cat', 'deer',
 (입력 채널 수 + bias(편향)) * 출력 채널 수
 ```
 
+
 #### 주의
 - ``MaxPooling2D 레이어``는 **이미지의 크기를 줄이는 레이어**이기 때문에 **Param**이 0이다.
 - ``Flatten 레이어``는 일렬로 나열 하기만 하는 레이어이기 때문에 **Param**이 0이다.
@@ -142,9 +143,6 @@ class_names = ['airplane', 'automobile', 'bird', 'cat', 'deer',
 #### Flatten 레이어의 Output Shape
 - **특징** 만을 뽑은 **압축된** ``3차원 데이터 이미지(가로, 세로, 채널)`` 를 ``1차원 벡터`` 로 **변환**하기 위해 ``가로 * 세로 * 출력 채널 수`` 만큼 곱해서 값을 **일렬로 나열**한다.
 - 따라서, ``4 x 4 x 64``값인 ``1024``가 ``Flatten``의 출력 모양이다.
-
-#### Dense 레이어의 Output Shape
-
 
 ## 참고
 - [1. 텐서 기초 살펴보기](https://codetorial.net/tensorflow/basics_of_tensor.html) - 텐서에 대해서
