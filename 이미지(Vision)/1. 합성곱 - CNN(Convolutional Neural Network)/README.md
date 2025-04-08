@@ -29,7 +29,9 @@
 - **models** : 딥러닝 모델을 ``구성`` 하고 ``학습`` 하는데 필요한 **고수준 API** 를 제공하는 모듈이다.<br>
   - ``Sequential()`` : **레이어**를 한줄의 **층의 형태**로 **순차적(직선적)으로 쌓는 모델**이다.
   - ``Model()`` : **다중입력** , **다중출력** 이 가능해서 **Sequential** 보다 ``유연한/복잡한`` 구조를 설계할 수 있다.
-  - ``summary()`` : 
+  - ``summary()`` : 모델의 **전체 구조**를 **요약**해서 출력해주며, 각 `레이어의 이름`, ``출력 형태``, ``학습해야 하는 파라미터 수`` 를 표의 형태로 보여준다.
+  - ``compile()`` : 
+  - ``fit()`` : 
 
 - **layers** : 딥러닝 모델을 구성하는 다양한 ``기본적인 층``을 제공하는 모듈이다.
   - [Conv2D(합성곱 레이어)](https://github.com/GUBBIB/2025MachineLearningBasics/blob/main/%EC%9D%B4%EB%AF%B8%EC%A7%80(Vision)/1.%20%ED%95%A9%EC%84%B1%EA%B3%B1%20-%20CNN(Convolutional%20Neural%20Network)/Doc/layers/Conv2D(%ED%95%A9%EC%84%B1%EA%B3%B1%20%EB%A0%88%EC%9D%B4%EC%96%B4).md) : 2D 합성곱 레이어를 만든다.
@@ -155,7 +157,7 @@ class_names = ['airplane', 'automobile', 'bird', 'cat', 'deer',
 
 
 ## 모델 컴파일과 훈련
-
+- 실제 데이터와 구성한 모델을 가지고 학습을 시키는 단계이다.
 
 ## 모델 평가
 
