@@ -48,6 +48,7 @@
   - [Dense(완전 연결 레이어)](https://github.com/GUBBIB/2025MachineLearningBasics/blob/main/%EC%9D%B4%EB%AF%B8%EC%A7%80(Vision)/1.%20%ED%95%A9%EC%84%B1%EA%B3%B1%20-%20CNN(Convolutional%20Neural%20Network)/Doc/layers/Dense(%EC%99%84%EC%A0%84%20%EC%97%B0%EA%B2%B0%20%EB%A0%88%EC%9D%B4%EC%96%B4).md) : ``Conv2D``, ``MaxPooling2D`` 로 추출한 특징들을 하나로 모아서, 최종적인 판단이나 예측을 내리는 함수이다.
     - 예를들어 ``CNN``에서 **고양이/강아지**를 구분하는 문제에서 ``Dense 레이어`` 가 **특징**들을 보고 **"이건 고양이다!"** 라고 ``결정``을 내리는 부분이다.
 
+*****
 ## 데이터셋 다운로드 및 데이터 확인하기 
 - **datasets.cifar10.load_data()로 load해온 데이터**
 
@@ -94,6 +95,7 @@ class_names = ['airplane', 'automobile', 'bird', 'cat', 'deer',
 | 8         | ship          |
 | 9         | truck         |
 
+*****
 ## 합성곱 층 만들기
 - 이 챕터에서 **합성곱 층** 은 ``Conv2D``, ``MaxPooling2D``, ``Flatten``, ``Dense`` 등을 사용해서 **Sequential 모델** 에 층을 쌓는 작업을 한다.
 - 이는 이미지로부터 **특징**을 ``추출`` 하고, 최종적으로 **분류 작업** 을 할 수 있도록 **모델의 구조**를 ``정의`` 하는 곳이다.<br>
@@ -155,10 +157,11 @@ class_names = ['airplane', 'automobile', 'bird', 'cat', 'deer',
 - **특징** 만을 뽑은 **압축된** ``3차원 데이터 이미지(가로, 세로, 채널)`` 를 ``1차원 벡터`` 로 **변환**하기 위해 ``가로 * 세로 * 출력 채널 수`` 만큼 곱해서 값을 **일렬로 나열**한다.
 - 따라서, ``4 x 4 x 64``값인 ``1024``가 ``Flatten``의 출력 모양이다.
 
-
+*****
 ## 모델 컴파일과 훈련
 - 실제 데이터와 구성한 모델을 가지고 학습을 시키는 단계이다.
 
+*****
 ## 모델 평가
 
 
