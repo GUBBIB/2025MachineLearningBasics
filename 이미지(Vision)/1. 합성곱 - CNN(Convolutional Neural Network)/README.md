@@ -132,7 +132,7 @@ class_names = ['airplane', 'automobile', 'bird', 'cat', 'deer',
 #### Dense 레이어의 Param 계산
 ```python
 # Dense 레이어의 Param 계산식
-(입력 채널 수 + 1) * 출력 채널 수
+(입력 채널 수 + bias(편향)) * 출력 채널 수
 ```
 
 #### 주의
