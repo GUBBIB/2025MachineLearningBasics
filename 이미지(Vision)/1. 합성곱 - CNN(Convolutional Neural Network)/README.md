@@ -164,7 +164,7 @@ class_names = ['airplane', 'automobile', 'bird', 'cat', 'deer',
 *****
 ## 모델 평가
 
-
+*****
 ## 참고
 - [1. 텐서 기초 살펴보기](https://codetorial.net/tensorflow/basics_of_tensor.html) - 텐서에 대해서
 - [[Pytorch]텐서의 정의](https://meaningful96.github.io/pytorch/pytorch1/) - 텐서 설명 이미지
