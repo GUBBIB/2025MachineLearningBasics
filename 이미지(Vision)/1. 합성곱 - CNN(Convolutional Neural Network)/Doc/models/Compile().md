@@ -54,7 +54,15 @@ model.compile(
         - 속도는 느리지만 디버깅이 쉽다.
 
 *****
-- ``steps_per_execution=1`` :
+- ``steps_per_execution=1`` : 훈련 중 모델이 ``몇 스텝``마다 그래프를 **한 번씩 실행**할지 결정한다.<br>
+    - ``Step``, ``Batch``, ``Epoch``
+
+    | 용어   | 의미 |
+    |--------|------|
+    | **Step**  | 배치 하나를 모델이 처리하는 단위 (`batch_size` 기준) |
+    | **Batch** | 한 번에 모델에 들어가는 데이터 묶음 (`batch_size`만큼) |
+    | **Epoch** | 전체 훈련 데이터를 한 바퀴 다 도는 것 |
+
 
 *****
 - ``jit_compile='auto'`` :
