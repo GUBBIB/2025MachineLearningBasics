@@ -77,7 +77,7 @@ model.compile(
         **!!** 만약 모델 실행 방식이 ``Eager``라면 ``jit_compile``은 의미가 없다.
 
 *****
-- ``auto_scale_loss=True`` :
+- ``auto_scale_loss=True`` : 각 출력의 ``손실 값(loss)``의 스케일(크기)이 너무 차이가 나면 자동으로 보정해서 균형을 맞춘다.
 
 *****
 ## 예시
