@@ -24,7 +24,7 @@ model.compile(
 
 *****
 - ``loss=None`` : 모델의 ``예측값``과 ``실제 정답`` 간의 차이를 **수치화**해서 나타내는 함수이며, ``옵티마이저``가 **가중치를 조정하는 기준**으로 사용된다.
-    - 기본값이 ``None``이지만 손실(loss) 함수를 지정해주지 않으면 오류가나므로 반드시 값을 설정해 줘야 한다.
+    - 기본값이 ``None``이지만 **손실(loss) 함수**를 지정해주지 않으면 오류가나므로 반드시 값을 설정해 줘야 한다.
     - **회귀 문제**에서 주로 사용하는  ``MeanSquaredError``, ``MeanAbsoluteError``와 **다중 클래스 분류 문제**에서 사용하는  ``CategoricalCrossentropy(원 - 핫 인코딩)``, ``SparseCategoricalCrossentropy(정수 라벨)`` 가 있으며 이외에도 ``이진 분류``, ``확률 분포 비교`` 등 여러가지 손실함수가 있다.
     - 이 챕터에서는 다중 클래스 분류를 해결 하는 ``SparseCategoricalCrossentropy`` 함수를 사용한다.
 
@@ -96,5 +96,3 @@ history = model.fit(train_images, train_labels, epochs=10,
 Epoch 10/10
 1563/1563 ━━━━━━━━━━━━━━━━━━━━ 5s 3ms/step - accuracy: 0.7729 - loss: 0.6437 - val_accuracy: 0.7071 - val_loss: 0.869
 ```
-
-! ``loss``는 모델이 **얼마나 틀렸는지**, ``accuracy``는 모델이 **얼마나 맞췄는지** ``비율``로 측정한 값이다.
