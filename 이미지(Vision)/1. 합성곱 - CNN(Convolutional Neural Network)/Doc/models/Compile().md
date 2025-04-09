@@ -55,7 +55,7 @@ model.compile(
 
 *****
 - ``steps_per_execution=1`` : 훈련 중 모델이 ``몇 스텝``마다 그래프를 **한 번씩 실행**할지 결정한다.<br>
-    - ``Step``, ``Batch``, ``Epoch``
+    - ``Step``, ``Batch``, ``Epoch``<br>
 
     | 용어   | 의미 |
     |--------|------|
