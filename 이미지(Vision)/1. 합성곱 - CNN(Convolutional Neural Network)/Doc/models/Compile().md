@@ -77,7 +77,8 @@ model.compile(
         **!!** 만약 모델 실행 방식이 ``Eager``라면 ``jit_compile``은 의미가 없다.
 
 *****
-- ``auto_scale_loss=True`` : 각 출력의 ``손실 값(loss)``의 스케일(크기)이 너무 차이가 나면 자동으로 보정해서 균형을 맞춘다.
+- ``auto_scale_loss=True`` : 각 출력의 ``손실 값(loss)``의 **스케일(크기)**이 너무 차이가 나면 ``자동``으로 **보정해서** 균형을 맞춘다.
+    - [출력이 2개 이상일 때만 의미가 있다.](https://github.com/GUBBIB/MachineLearningBasics_TensorFlow/blob/main/%EC%9D%B4%EB%AF%B8%EC%A7%80(Vision)/1.%20%ED%95%A9%EC%84%B1%EA%B3%B1%20-%20CNN(Convolutional%20Neural%20Network)/Doc/models/etc/%EC%84%9C%EB%A1%9C%20%EB%AA%A9%EC%A0%81%EC%9D%B4%20%EB%8B%A4%EB%A5%B8%20%EC%B6%9C%EB%A0%A5%20%EC%98%88%EC%8B%9C.md)
 
 *****
 ## 예시
