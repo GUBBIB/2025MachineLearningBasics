@@ -35,8 +35,9 @@ model.compile(
     ※ 출력이 2개 이상이지만 ``loss_weights``를 ``None``으로 주면 각 출력의 **손실**은 동일한 ``가중치(1.0)``로 계산된다.
 
 *****
-- ``metrics=None`` :
-
+- ``metrics=None`` :모델이 학습 중 얼마나 잘 예측하고 있는지 **평가**하는 기준을 설정한다.
+    - 대표적인 지표로는 **정확도(``accuracy``)**, **평균 절대 오차(``mae``)**, **평균 제곱 오차(``mse``)** 등이 있다.
+    
 *****
 - ``weighted_metrics=None`` : 
 
@@ -53,3 +54,21 @@ model.compile(
 - ``auto_scale_loss=True`` :
 
 *****
+## 예시
+```python
+# 훈련 방식
+model.compile(optimizer='adam',
+              loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),
+              metrics=['accuracy'])
+
+history = model.fit(train_images, train_labels, epochs=10, 
+                    validation_data=(test_images, test_labels))
+```
+```python
+# 마지막 훈련 시점 출력 결과
+Epoch 10/10
+1563/1563 ━━━━━━━━━━━━━━━━━━━━ 5s 3ms/step - accuracy: 0.7729 - loss: 0.6437 - val_accuracy: 0.7071 - val_loss: 0.869
+```
+
+! Epoch는 훈련 데이터로 몇번 반복 했는지를 표시한다.<br>
+!! ``loss``는 모델이 **얼마나 틀렸는지**, ``accuracy``는 모델이 **얼마나 맞췄는지** ``비율``로 측정한 값이다.
