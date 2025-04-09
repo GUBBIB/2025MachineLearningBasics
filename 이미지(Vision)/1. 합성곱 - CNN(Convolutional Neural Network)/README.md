@@ -30,7 +30,7 @@
   - ``Sequential()`` : **레이어**를 한줄의 **층의 형태**로 **순차적(직선적)으로 쌓는 모델**이다.
   - ``Model()`` : **다중입력** , **다중출력** 이 가능해서 **Sequential** 보다 ``유연한/복잡한`` 구조를 설계할 수 있다.
   - ``summary()`` : 모델의 **전체 구조**를 **요약**해서 출력해주며, 각 `레이어의 이름`, ``출력 형태``, ``학습해야 하는 파라미터 수`` 를 표의 형태로 보여준다.
-  - ``compile()`` : 
+  - [compile()](https://github.com/GUBBIB/MachineLearningBasics_TensorFlow/blob/main/%EC%9D%B4%EB%AF%B8%EC%A7%80(Vision)/1.%20%ED%95%A9%EC%84%B1%EA%B3%B1%20-%20CNN(Convolutional%20Neural%20Network)/Doc/models/Compile().md) : **모델**을 학습하기 전에, 학습에 필요한 ``방식/전략`` **(옵티마이저, 손실 함수, 평가 지표 등)** 을 설정하는 함수이다.
   - ``fit()`` : 
 
 - **layers** : 딥러닝 모델을 구성하는 다양한 ``기본적인 층``을 제공하는 모듈이다.
