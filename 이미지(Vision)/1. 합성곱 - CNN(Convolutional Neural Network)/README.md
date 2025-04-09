@@ -77,6 +77,11 @@ class_names = ['airplane', 'automobile', 'bird', 'cat', 'deer',
 ```
 - ``###_labels``에는 ``###_images``에 해당하는 정답 값이 들어있지만 그 값이 ``0, 1, ..., 9`` 이런 식으로 **정수** 형태로 들어있다.
 - 따라서 ``###_labels`` 값을 ``index``로 사용해서 클래스 이름이 들어있는 배열인 ``class_names``와 연결해 사용한다.
+```python
+# 예시
+# train_images[3]의 클래스 이름이 "Cat" 일 때
+train_images[3]  class_names[train_labels[3]]
+```
 
 ※ ``class_names``에서 정의한 값의 순서는 **``CIFAR-10``의 공식 클래스 순서** 에 맞춰서 작성한다.
 
