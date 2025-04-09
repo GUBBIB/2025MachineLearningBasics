@@ -83,7 +83,6 @@ class_names = ['airplane', 'automobile', 'bird', 'cat', 'deer',
 # train_images[3]의 클래스 이름이 "Cat" 일 때
 class_names[train_labels[3]]
 출력 : "Cat"
-
 ```
 
 ※ ``class_names``에서 정의한 값의 순서는 **``CIFAR-10``의 공식 클래스 순서** 에 맞춰서 작성한다.
