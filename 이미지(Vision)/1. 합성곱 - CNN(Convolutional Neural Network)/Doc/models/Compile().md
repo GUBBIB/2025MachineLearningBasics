@@ -30,8 +30,8 @@ model.compile(
 
 *****
 - ``loss_weights=None`` : 출력마다 계산되는 손실 함수의 값들에 ``기여 비율(중요도)``을 설정해서 **균형 있는 학습**을 할 수 있게 해준다.
-    - **출력**이 ``2개 이상``일 때만 의미가 있으며, 각각의 출력이 **서로 다른 목적을 가질 때** 주로 사용한다.
-    
+    - **출력**이 ``2개 이상``일 때만 의미가 있으며, 각각의 출력이 [서로 다른 목적을 가질 때](https://github.com/GUBBIB/MachineLearningBasics_TensorFlow/blob/main/%EC%9D%B4%EB%AF%B8%EC%A7%80(Vision)/1.%20%ED%95%A9%EC%84%B1%EA%B3%B1%20-%20CNN(Convolutional%20Neural%20Network)/Doc/models/etc/%EC%84%9C%EB%A1%9C%20%EB%AA%A9%EC%A0%81%EC%9D%B4%20%EB%8B%A4%EB%A5%B8%20%EC%B6%9C%EB%A0%A5%20%EC%98%88%EC%8B%9C.md) 주로 사용한다.
+
     ※ 출력이 2개 이상이지만 ``loss_weights``를 ``None``으로 주면 각 출력의 **손실**은 동일한 ``가중치(1.0)``로 계산된다.
 
 *****
