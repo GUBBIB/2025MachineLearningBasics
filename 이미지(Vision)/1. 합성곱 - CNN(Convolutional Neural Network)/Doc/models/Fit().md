@@ -140,6 +140,7 @@ model.fit(
 
 *****
 - ``validation_freq=1`` : 몇 번째 ``epochs``마다 **검증(validation)** 을 수행할지 정의한다.
+
     ```python
     # 예시
     model.fit(x, y, validation_data=(val_x, val_y), validation_freq=3)
