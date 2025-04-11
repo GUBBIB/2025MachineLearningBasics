@@ -166,8 +166,17 @@ class_names[train_labels[3]]
 
 *****
 ## 모델 컴파일과 훈련
-- 실제 데이터와 구성한 모델을 가지고 학습을 시키는 단계이다.
+- ``실제 데이터``와 ``구성한 모델``을 가지고 **학습**을 시키는 단계이다.
 
+- compile 함수를 통해서 모델의 학습방법을 정하고, fit 함수로 학습 데이터를 넣는다.
+```python
+model.compile(optimizer='adam',
+              loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),
+              metrics=['accuracy'])
+
+history = model.fit(train_images, train_labels, epochs=10, 
+                    validation_data=(test_images, test_labels))
+```
 *****
 ## 모델 평가
 
