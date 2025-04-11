@@ -204,9 +204,9 @@ Epoch 10/10
 313/313 - 0s - 1ms/step - accuracy: 0.7071 - loss: 0.8691
 ```
 ![모델 평가](https://github.com/user-attachments/assets/5adeed62-fd50-4835-a284-ff8748ac92de)
-- ``accuracy``
+- **accuracy** :
   - ``Epoch``가 진행될수록 ``accuracy``가 점점 올라가고 있다. 이는 모델이 훈련 데이터에 대해서 학습이 잘 되고 있다는 뜻이다.
-- ``val_accuracy``
+- **val_accuracy** :
   - 
 
 *****
