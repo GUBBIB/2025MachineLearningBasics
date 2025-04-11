@@ -201,16 +201,19 @@ Epoch 10/10
 *****
 ## 모델 평가
 ```python
+# Epoch 10/10 학습 결과
 accuracy: 0.7729 - loss: 0.6437 - val_accuracy: 0.7071 - val_loss: 0.8691
 
+# 
 313/313 - 0s - 1ms/step - accuracy: 0.7071 - loss: 0.8691
 ```
 ![모델 평가](https://github.com/user-attachments/assets/5adeed62-fd50-4835-a284-ff8748ac92de)
 - **accuracy** :
-  - ``Epoch``가 진행될수록 ``accuracy``가 점점 올라가고 있다. 이는 모델이 훈련 데이터에 대해서 학습이 잘 되고 있다는 뜻이다.
+  - 훈련 데이터 정확도는 ``Epoch``가 진행될수록 ``accuracy``가 점점 올라가고 있다. 이는 모델이 훈련 데이터에 대해서 학습이 잘 되고 있다는 뜻이다.
 - **val_accuracy** :
-  - 
+  - 검증 데이터 정확도는 ``Epoch``가 진행될수록 ``val_accuracy``가 올라가지만 일정 ``Epoch``이후 부터는 약간의 변동(오르내림)이 발생한다.
 
+  ※ **훈련 데이터 정확도**는 ``77.29%``, **검증 데이터 정확도**는 ``70.71%``로 약 ``7%``의 차이가 나지만 그 차이가 **심하지 않기때문에** 과적합이 발생했다고 보기에는 어렵지만, **과적합이 시작되는 단계**로 볼 수 있다.
 *****
 ## 참고
 - [1. 텐서 기초 살펴보기](https://codetorial.net/tensorflow/basics_of_tensor.html) - 텐서에 대해서
