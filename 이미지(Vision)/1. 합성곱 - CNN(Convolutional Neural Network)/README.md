@@ -204,7 +204,7 @@ Epoch 10/10
 # Epoch 10/10 학습 결과
 accuracy: 0.7729 - loss: 0.6437 - val_accuracy: 0.7071 - val_loss: 0.8691
 
-# 
+# 검증 데이터 정확도 및 손실값
 313/313 - 0s - 1ms/step - accuracy: 0.7071 - loss: 0.8691
 ```
 ![모델 평가](https://github.com/user-attachments/assets/5adeed62-fd50-4835-a284-ff8748ac92de)
