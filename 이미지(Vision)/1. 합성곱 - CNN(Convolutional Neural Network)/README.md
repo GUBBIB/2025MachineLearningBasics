@@ -202,7 +202,8 @@ Epoch 10/10
 ## 모델 평가
 ```python
 Epoch 10/10
-1563/1563 ━━━━━━━━━━━━━━━━━━━━ 5s 3ms/step - accuracy: 0.7729 - loss: 0.6437 - val_accuracy: 0.7071 - val_loss: 0.8691
+1563/1563 ━━━━━━━━━━━━━━━━━━━━ 5s 3ms/step - accuracy: 0.7729 - loss: 0.6437 - 
+val_accuracy: 0.7071 - val_loss: 0.8691
 
 313/313 - 0s - 1ms/step - accuracy: 0.7071 - loss: 0.8691
 ```
