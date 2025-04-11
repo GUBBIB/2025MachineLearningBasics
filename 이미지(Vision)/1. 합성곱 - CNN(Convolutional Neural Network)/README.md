@@ -200,10 +200,7 @@ Epoch 10/10
 
 *****
 ## 모델 평가
-
-<!-- 
-
--->
+![모델 평가](https://github.com/user-attachments/assets/5adeed62-fd50-4835-a284-ff8748ac92de)
 
 *****
 ## 참고
