@@ -36,3 +36,15 @@ TensorFlow 공식 튜토리얼을 기반으로 공부했습니다.
 DCGAN 감별자 손실 함수 
 
 -->
+
+<!--
+1. cmd 관리자 권한 -> 
+myTensorFlow\Scripts\activate 
+로 가상 머신 실행
+
+2. 가상머신 경로로 이동
+cd C:\Windows\System32\myTensorflow
+
+3. jupyter notebook 실행
+jupyter notebook
+-->
