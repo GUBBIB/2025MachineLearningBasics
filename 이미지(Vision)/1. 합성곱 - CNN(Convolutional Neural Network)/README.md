@@ -166,9 +166,7 @@ class_names[train_labels[3]]
 
 *****
 ## 모델 컴파일과 훈련
-- ``실제 데이터``와 ``구성한 모델``을 가지고 **학습**을 시키는 단계이다.
-
-- compile 함수를 통해서 모델의 학습방법을 정하고, fit 함수로 학습 데이터를 넣는다.
+### 코드
 ```python
 model.compile(optimizer='adam',
               loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),
@@ -177,10 +175,17 @@ model.compile(optimizer='adam',
 history = model.fit(train_images, train_labels, epochs=10, 
                     validation_data=(test_images, test_labels))
 ```
-*****
-## 모델 평가
 
-<!-- 
+- ``실제 데이터``와 ``구성한 모델``을 가지고 **학습**을 시키는 단계이다.
+
+- ``compile 함수``를 통해서 모델의 **학습방법**을 정하고, ``fit 함수``로 **학습 데이터**를 넣은 다음 학습한다.
+
+### 출력 결과
+```python
+# 마지막 Epoch 학습 결과
+Epoch 10/10
+1563/1563 ━━━━━━━━━━━━━━━━━━━━ 5s 3ms/step - accuracy: 0.7729 - loss: 0.6437 - val_accuracy: 0.7071 - val_loss: 0.8691
+```
 - ``accuracy``: 정확도 **(정답 확률)**
     - ``77.29%``의 **정답률**로 모델이 훈련 데이터에 대해 예측했다.
 - `loss`: 손실 값 **(모델 예측이 정답과 얼마나 다른지 나타냄)**
@@ -192,6 +197,12 @@ history = model.fit(train_images, train_labels, epochs=10,
     - **손실 값**이 훈련보다 더 크면 **과적합(overfitting)**을 의심해볼 수 있다.
 
 ! ``loss``는 모델이 **얼마나 틀렸는지**, ``accuracy``는 모델이 **얼마나 맞췄는지** ``비율``로 측정한 값이다.
+
+*****
+## 모델 평가
+
+<!-- 
+
 -->
 
 *****
