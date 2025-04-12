@@ -7,7 +7,7 @@
 train_ds = train_ds.shuffle(buffer_size)
 ```
 - 데이터를 로드할 버퍼의 크기를 값으로 주면 그 값 만큼 데이터를 들고와 섞는다.
-- 단, ``buffer_size``의 **크기가 데이터의 크기보다 크거나 같다면** **``완벽하게``** 섞이지만, ``buffer_size``의 **크기가 작다면 부분적으로만** 섞인다.
+- 단, ``buffer_size``의 **크기가 데이터의 크기보다 크거나 같다면``(data_size ≤ buffer_size)``** **``완벽하게``** 섞이지만, ``buffer_size``의 **크기가 작다면 부분적으로만** 섞인다. 
 
 ## 예시
 ```python
