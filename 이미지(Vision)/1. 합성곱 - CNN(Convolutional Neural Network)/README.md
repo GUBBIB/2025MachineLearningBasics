@@ -30,22 +30,22 @@
   - ``Sequential()`` : **레이어**를 한줄의 **층의 형태**로 **순차적(직선적)으로 쌓는 모델**이다.
   - ``Model()`` : **다중입력** , **다중출력** 이 가능해서 **Sequential** 보다 ``유연한/복잡한`` 구조를 설계할 수 있다.
   - ``summary()`` : 모델의 **전체 구조**를 **요약**해서 출력해주며, 각 `레이어의 이름`, ``출력 형태``, ``학습해야 하는 파라미터 수`` 를 표의 형태로 보여준다.
-  - [Compile()](https://github.com/GUBBIB/MachineLearningBasics_TensorFlow/blob/main/%EC%9D%B4%EB%AF%B8%EC%A7%80(Vision)/1.%20%ED%95%A9%EC%84%B1%EA%B3%B1%20-%20CNN(Convolutional%20Neural%20Network)/Doc/models/Compile().md) : **모델**을 학습하기 전에, 학습에 필요한 ``방식/전략`` **(옵티마이저, 손실 함수, 평가 지표 등)** 을 설정하는 함수이다.
-  - [Fit()](https://github.com/GUBBIB/MachineLearningBasics_TensorFlow/blob/main/%EC%9D%B4%EB%AF%B8%EC%A7%80(Vision)/1.%20%ED%95%A9%EC%84%B1%EA%B3%B1%20-%20CNN(Convolutional%20Neural%20Network)/Doc/models/Fit().md): 모델에 데이터를 넣어서 합습시키는 함수이다.
+  - [Compile()](https://github.com/GUBBIB/MachineLearningBasics_TensorFlow/blob/main/Doc/Models/Compile().md) : **모델**을 학습하기 전에, 학습에 필요한 ``방식/전략`` **(옵티마이저, 손실 함수, 평가 지표 등)** 을 설정하는 함수이다.
+  - [Fit()](https://github.com/GUBBIB/MachineLearningBasics_TensorFlow/blob/main/Doc/Models/Fit().md): 모델에 데이터를 넣어서 합습시키는 함수이다.
 
 - **layers** : 딥러닝 모델을 구성하는 다양한 ``기본적인 층``을 제공하는 모듈이다.
-  - [Conv2D(합성곱 레이어)](https://github.com/GUBBIB/2025MachineLearningBasics/blob/main/%EC%9D%B4%EB%AF%B8%EC%A7%80(Vision)/1.%20%ED%95%A9%EC%84%B1%EA%B3%B1%20-%20CNN(Convolutional%20Neural%20Network)/Doc/layers/Conv2D(%ED%95%A9%EC%84%B1%EA%B3%B1%20%EB%A0%88%EC%9D%B4%EC%96%B4).md) : 2D 합성곱 레이어를 만든다.
+  - [Conv2D(합성곱 레이어)](https://github.com/GUBBIB/MachineLearningBasics_TensorFlow/blob/main/Doc/Layers/Conv2D(%ED%95%A9%EC%84%B1%EA%B3%B1%20%EB%A0%88%EC%9D%B4%EC%96%B4).md) : 2D 합성곱 레이어를 만든다.
     - 이미지에서 ``특징(feature)`` 을 추출하는 역할을 하며 ``필터(커널)`` 을 이용해 이미지에서 ``중요한 패턴``을 감지한다.<br>
     - 필터를 거쳐서 나온 값이 클수록 특징이 뚜렷하다는 의미이다.
 
-  - [MaxPooling2D(최대 풀링 레이어)](https://github.com/GUBBIB/2025MachineLearningBasics/blob/main/%EC%9D%B4%EB%AF%B8%EC%A7%80(Vision)/1.%20%ED%95%A9%EC%84%B1%EA%B3%B1%20-%20CNN(Convolutional%20Neural%20Network)/Doc/layers/MaxPooling2D(%EC%B5%9C%EB%8C%80%20%ED%92%80%EB%A7%81%20%EB%A0%88%EC%9D%B4%EC%96%B4).md) : 주로 ``Conv2D 함수`` 뒤에 사용되며, 추출한 ``특징``을 **유지하면서** 크기는 **줄이는 함수**이다.
+  - [MaxPooling2D(최대 풀링 레이어)](https://github.com/GUBBIB/MachineLearningBasics_TensorFlow/blob/main/Doc/Layers/MaxPooling2D(%EC%B5%9C%EB%8C%80%20%ED%92%80%EB%A7%81%20%EB%A0%88%EC%9D%B4%EC%96%B4).md) : 주로 ``Conv2D 함수`` 뒤에 사용되며, 추출한 ``특징``을 **유지하면서** 크기는 **줄이는 함수**이다.
 
     - 크기를 줄이기 때문에 **계산량**도 줄고, **과적합** 도 막아준다.
 
-  - [Flatten(평탄화 레이어)](https://github.com/GUBBIB/2025MachineLearningBasics/blob/main/%EC%9D%B4%EB%AF%B8%EC%A7%80(Vision)/1.%20%ED%95%A9%EC%84%B1%EA%B3%B1%20-%20CNN(Convolutional%20Neural%20Network)/Doc/layers/Flatten(%ED%8F%89%ED%83%84%ED%99%94%20%EB%A0%88%EC%9D%B4%EC%96%B4).md) : ``Conv2D``, ``MaxPooling2D`` 등을 통해 얻은 ``다차원(2D/3D 등) 특징 데이터``를 ``1차원 벡터``로 변환하는 레이어다.
+  - [Flatten(평탄화 레이어)](https://github.com/GUBBIB/MachineLearningBasics_TensorFlow/blob/main/Doc/Layers/Flatten(%ED%8F%89%ED%83%84%ED%99%94%20%EB%A0%88%EC%9D%B4%EC%96%B4).md) : ``Conv2D``, ``MaxPooling2D`` 등을 통해 얻은 ``다차원(2D/3D 등) 특징 데이터``를 ``1차원 벡터``로 변환하는 레이어다.
     - ``Dense 레이어`` 가 **1차원 데이터** 만 입력받기 때문에, 그 전에 ``Flatten 레이어`` 를 사용해 데이터를 1차원으로 변환해야 한다.
 
-  - [Dense(완전 연결 레이어)](https://github.com/GUBBIB/2025MachineLearningBasics/blob/main/%EC%9D%B4%EB%AF%B8%EC%A7%80(Vision)/1.%20%ED%95%A9%EC%84%B1%EA%B3%B1%20-%20CNN(Convolutional%20Neural%20Network)/Doc/layers/Dense(%EC%99%84%EC%A0%84%20%EC%97%B0%EA%B2%B0%20%EB%A0%88%EC%9D%B4%EC%96%B4).md) : ``Conv2D``, ``MaxPooling2D`` 로 추출한 특징들을 하나로 모아서, 최종적인 판단이나 예측을 내리는 함수이다.
+  - [Dense(완전 연결 레이어)](https://github.com/GUBBIB/MachineLearningBasics_TensorFlow/blob/main/Doc/Layers/Dense(%EC%99%84%EC%A0%84%20%EC%97%B0%EA%B2%B0%20%EB%A0%88%EC%9D%B4%EC%96%B4).md) : ``Conv2D``, ``MaxPooling2D`` 로 추출한 특징들을 하나로 모아서, 최종적인 판단이나 예측을 내리는 함수이다.
     - 예를들어 ``CNN``에서 **고양이/강아지**를 구분하는 문제에서 ``Dense 레이어`` 가 **특징**들을 보고 **"이건 고양이다!"** 라고 ``결정``을 내리는 부분이다.
 
 *****
