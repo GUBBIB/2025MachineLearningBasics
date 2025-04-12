@@ -25,8 +25,6 @@ train_ds = tf.keras.utils.image_dataset_from_directory(
   image_size=(img_height, img_width),
   batch_size=batch_size)
 ```
-
-
 ```python
 val_ds = tf.keras.utils.image_dataset_from_directory(
   data_dir,
@@ -36,6 +34,10 @@ val_ds = tf.keras.utils.image_dataset_from_directory(
   image_size=(img_height, img_width),
   batch_size=batch_size)
 ```
+- **전체 이미지 데이터** 중 ``20%``는 **검증 데이터**로, ``80%``는 **훈련 데이터**로 사용이 된다.
+- 훈련 데이터, 검증 데이터를 구분 하는 방법은 ``subset``의 값으로 구분한다.
+
+## 성능을 높이도록 데이터셋 구성
 
 
 <!--
