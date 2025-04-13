@@ -38,6 +38,21 @@ val_ds = tf.keras.utils.image_dataset_from_directory(
 - 훈련 데이터, 검증 데이터를 구분 하는 방법은 ``subset``의 값으로 구분한다.
 
 ## 성능을 높이도록 데이터셋 구성
+### 데이터 처리 최적화
+```python
+AUTOTUNE = tf.data.AUTOTUNE
+
+train_ds = train_ds.cache().shuffle(1000).prefetch(buffer_size=AUTOTUNE)
+val_ds = val_ds.cache().prefetch(buffer_size=AUTOTUNE)
+```
+- [cache()](https://github.com/GUBBIB/MachineLearningBasics_TensorFlow/blob/main/Doc/Dataset/Cache().md) 메소드를 사용해 **한 번 읽은 데이터를 메모리 또는 디스크에 저장**해서 ``Epoch`` **반복 시**에 똑같은 데이터를 다시 로딩하지 않도록 한다.
+- [prefetch()](https://github.com/GUBBIB/MachineLearningBasics_TensorFlow/blob/main/Doc/Dataset/Prefetch().md) 메소드를 사용해 **모델이 학습하는 동안 다음 데이터를 미리 준비하게** 한다.
+
+### 데이터 정규화
+```python
+normalization_layer = layers.Rescaling(1./255)
+```
+- 처리하는 데이터가 **이미지 텐서**이기때문에 ``RGB``값인 ``255``로 나누어 **모델이 학습하기 쉬운 형태**인 ``0 ~ 1``사이 **실수**로 **정규화** 시킨다.
 
 
 <!--
