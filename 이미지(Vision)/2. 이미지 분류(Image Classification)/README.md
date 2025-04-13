@@ -65,14 +65,27 @@ print(np.min(first_image), np.max(first_image))
 # 출력
 0.0 0.9991613
 ```
-**정규화**가 잘 되었는지 확인하기 위해, 이미지 하나를 꺼내어 ``최소``, ``최대값``을 출력해보면 ``0 ~ 1``사이의 **실수**로 **정규화**가 잘 된것을 확인할 수 있다.
+- **정규화**가 잘 되는지 확인하기 위해, 이미지 하나를 꺼내어 ``최소``, ``최대값``을 출력해보면 ``0 ~ 1``사이의 **실수**로 **정규화**가 잘 된것을 확인할 수 있다.
 
-<!--
-normalization_layer = layers.Rescaling(1./255)
-함수 정의 한거 처럼 normaliztaion_layer 변수를 어딘가의 매개변수로 주면 Rescaling을 쓰겠다는거임
-규칙을 정해놓는 거다
+**※ 하지만 모델에서는 만들어둔 ``normalization_layer``는 사용하지 않고 ``Rescaling 레이어``를 사용한다.**
 
-normalized_ds = train_ds.map(lambda x, y: (normalization_layer(x), y))
+## 기본 Keras 모델
+### 모델 만들기
+```python
+num_classes = len(class_names)
 
-이런식으로 들어감
--->
+model = Sequential([
+  keras.Input(shape=(img_height, img_width, 3)),
+  layers.Rescaling(1./255),
+  layers.Conv2D(16, 3, padding='same', activation='relu'),
+  layers.MaxPooling2D(),
+  layers.Conv2D(32, 3, padding='same', activation='relu'),
+  layers.MaxPooling2D(),
+  layers.Conv2D(64, 3, padding='same', activation='relu'),
+  layers.MaxPooling2D(),
+  layers.Flatten(),
+  layers.Dense(128, activation='relu'),
+  layers.Dense(num_classes)
+])
+```
+- 이 모델은 ``Sequential`` 모델로 구성 되었고 제일 처음 정규화를 진행하며 
