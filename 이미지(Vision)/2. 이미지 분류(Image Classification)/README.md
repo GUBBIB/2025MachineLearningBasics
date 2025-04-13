@@ -53,7 +53,19 @@ val_ds = val_ds.cache().prefetch(buffer_size=AUTOTUNE)
 normalization_layer = layers.Rescaling(1./255)
 ```
 - 처리하는 데이터가 **이미지 텐서**이기때문에 ``RGB``값인 ``255``로 나누어 **모델이 학습하기 쉬운 형태**인 ``0 ~ 1``사이 **실수**로 **정규화** 시킨다.
+- **Rescaling() 함수** 가 ``__call__()`` 메소드를 **오버라이딩** 하고 있기때문에 **Rescaling()**을 참조하는 **normalization_layer 변수**는 ``함수``처럼 사용할 수 있다.
 
+```python
+normalized_ds = train_ds.map(lambda x, y: (normalization_layer(x), y))
+image_batch, labels_batch = next(iter(normalized_ds))
+first_image = image_batch[0]
+# Notice the pixel values are now in `[0,1]`.
+print(np.min(first_image), np.max(first_image))
+
+# 출력
+0.0 0.9991613
+```
+**정규화**가 잘 되었는지 확인하기 위해, 이미지 하나를 꺼내어 ``최소``, ``최대값``을 출력해보면 ``0 ~ 1``사이의 **실수**로 **정규화**가 잘 된것을 확인할 수 있다.
 
 <!--
 normalization_layer = layers.Rescaling(1./255)
