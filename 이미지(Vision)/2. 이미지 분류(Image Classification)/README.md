@@ -91,3 +91,45 @@ model = Sequential([
 - 이 모델은 ``Sequential`` 모델로 구성 되었으며, 입력 이미지에 대해서 정규화를 수행한다. 
 - 이후 ``Conv2D 레이어``로 **특징 추출**, ``MaxPooling2D 레이어``로 **이미지 크기 축소**를 ``3번`` 진행하며, ``Flatten 레이어``로 **1차원으로 펼친 후**, ``Dense 레이어``로 **최종 분류 결과**를 출력한다.
 - **padding**을 ``same``으로 주었기 때문에 가장자리 특징에 대해서 손실은 없다.
+
+### 모델 컴파일
+```python
+model.compile(optimizer='adam',
+              loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),
+              metrics=['accuracy'])
+```
+- **CNN**의 **기본적인 컴파일 코드**를 사용한다.
+자세한건 [Compile() 문서](https://github.com/GUBBIB/MachineLearningBasics_TensorFlow/blob/main/Doc/Models/Compile().md) 에서 확인할 수 있다.
+
+### 모델 요약
+| Layer (type)            | Output Shape         | Param #     |
+|-------------------------|----------------------|-------------|
+| Rescaling               | (None, 180, 180, 3)  | 0           |
+| Conv2D                  | (None, 180, 180, 16) | 448         |
+| MaxPooling2D            | (None, 90, 90, 16)   | 0           |
+| Conv2D                  | (None, 90, 90, 32)   | 4,640       |
+| MaxPooling2D            | (None, 45, 45, 32)   | 0           |
+| Conv2D                  | (None, 45, 45, 64)   | 18,496      |
+| MaxPooling2D            | (None, 22, 22, 64)   | 0           |
+| Flatten                 | (None, 30976)        | 0           |
+| Dense                   | (None, 128)          | 3,965,056   |
+| Dense                   | (None, 5)            | 645         |
+
+> 총 파라미터 수: **3,989,285개**
+- 이 표는 **모델에 포함된** ``레이어의 종류``와 ``형태`` 및 ``학습하는 파라미터 수``를 **요약**해서 보여준다.
+
+## 모델 훈련
+```python
+epochs=10
+history = model.fit(
+  train_ds,
+  validation_data=val_ds,
+  epochs=epochs
+)
+```
+- **Epoch**는 ``10``으로 **훈련데이터를** ``10번`` 반복한다.
+- **검증 데이터**는 ``전체 꽃 데이터셋(총 3670개)``의 ``20%``를 사용한 ``val_ds 변수``를 넣는다.
+
+## 모델 평가
+![첫 번째 훈련 평가](https://github.com/user-attachments/assets/7ceaf13f-18d7-4f76-a232-61ae96d2e544)
+
