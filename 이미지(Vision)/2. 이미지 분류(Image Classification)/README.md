@@ -151,6 +151,6 @@ Total Epochs: 10
 #### 사용 레이어 설명
 [RandomFlip()](https://github.com/GUBBIB/MachineLearningBasics_TensorFlow/blob/main/Doc/Layers/RandomFlip().md) : **데이터 증강을 위한 레이어**로 이미지를 **무작위**로 ``상하`` 또는 ``좌우``로 뒤집어 학습 데이터를 다양하게 만든다.
 
-[RandomRotation()](https://github.com/GUBBIB/MachineLearningBasics_TensorFlow/blob/main/Doc/Layers/RandomRotation().md) :
+[RandomRotation()](https://github.com/GUBBIB/MachineLearningBasics_TensorFlow/blob/main/Doc/Layers/RandomRotation().md) : **데이터 증강을 위한 레이어**로 이미지를 **무작위**로 ``회전``시켜 학습 데이터를 다양하게 만든다.
 
 [RandomZoom()](https://github.com/GUBBIB/MachineLearningBasics_TensorFlow/blob/main/Doc/Layers/RandomZoom().md) :
