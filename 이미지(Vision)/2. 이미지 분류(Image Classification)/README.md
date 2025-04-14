@@ -148,6 +148,9 @@ Total Epochs: 10
 - **데이터 증강** 이란 **조금씩 다르게 변형** 해서 **새로운 데이터처럼** 만들어내는 방법이다.
 - **과대적합(과적합)** 은 일반적으로 **훈련 예제가 적을 때** 발생한다. 그러므로 ``데이터 증강 기법`` 을 이용해서 기존 예제에서 **추가 훈련 데이터를 생성해** 훈련시킨다.
 
-[RandomFlip()]()
-[RandomRotation()]()
-[RandomZoom()]()
+#### 사용 레이어 설명
+[RandomFlip()](https://github.com/GUBBIB/MachineLearningBasics_TensorFlow/blob/main/Doc/Layers/RandomFlip().md) :
+
+[RandomRotation()](https://github.com/GUBBIB/MachineLearningBasics_TensorFlow/blob/main/Doc/Layers/RandomRotation().md) :
+
+[RandomZoom()](https://github.com/GUBBIB/MachineLearningBasics_TensorFlow/blob/main/Doc/Layers/RandomZoom().md) :
