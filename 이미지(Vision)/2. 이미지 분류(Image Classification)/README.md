@@ -133,3 +133,5 @@ history = model.fit(
 ## 모델 평가
 ![첫 번째 훈련 평가](https://github.com/user-attachments/assets/7ceaf13f-18d7-4f76-a232-61ae96d2e544)
 
+- 훈련 데이터:
+  > 테스트테스트
