@@ -196,3 +196,37 @@ model = Sequential([
 - 이전 모델과 달라진 점은 **이미지가 처음 들어올 때**, **데이터 증강 레이어**를 만나면서 ``반전``, ``회전``, ``축소/확대``가 된다는 점과 **마지막에 20%의 랜덤한 뉴런을 차단**한다는 점이다.
 
 ## 모델 요약
+| Layer                          | Output Shape             | Param #     |
+|---------------------------------|--------------------------|-------------|
+| `sequential_1 (Sequential)`     | (None, 180, 180, 3)      | 0           |
+| `rescaling_2 (Rescaling)`       | (None, 180, 180, 3)      | 0           |
+| `conv2d_3 (Conv2D)`             | (None, 180, 180, 16)     | 448         |
+| `max_pooling2d_3 (MaxPooling2D)`| (None, 90, 90, 16)       | 0           |
+| `conv2d_4 (Conv2D)`             | (None, 90, 90, 32)       | 4,640       |
+| `max_pooling2d_4 (MaxPooling2D)`| (None, 45, 45, 32)       | 0           |
+| `conv2d_5 (Conv2D)`             | (None, 45, 45, 64)       | 18,496      |
+| `max_pooling2d_5 (MaxPooling2D)`| (None, 22, 22, 64)       | 0           |
+| `dropout (Dropout)`             | (None, 22, 22, 64)       | 0           |
+| `flatten_1 (Flatten)`           | (None, 30976)            | 0           |
+| `dense_2 (Dense)`               | (None, 128)              | 3,965,056   |
+| `outputs (Dense)`               | (None, 5)                | 645         |
+
+> 총 파라미터 수: **3,989,285개**
+
+- 이전 모델과 학습하는 총 파라미터 수는 같지만 처음 **시작부분**과 **마지막부분**에 ``데이터 증강 모델 Sequentail_1``과 ``Dropout 레이어``가 들어갔다는 점이 다르다.
+
+## 모델 훈련
+```python
+epochs = 15
+history = model.fit(
+  train_ds,
+  validation_data=val_ds,
+  epochs=epochs
+)
+```
+- 이번에는 ``Epochs``를 ``15``로 설정하여 충분한 학습 시간을 주게 했다.
+- **데이터 증강 모델** 때문에 이미지 데이터가 **매번 달라지므로** 거의 **새로운 이미지로 학습할 수 있는 효과**를 기대할 수 있다.
+
+## 모델 평가
+![과적합 문제 해결 후 훈련 성능](https://github.com/user-attachments/assets/1176f360-8d9d-4fa1-a7f4-4a00bc4cd4ac)
+
