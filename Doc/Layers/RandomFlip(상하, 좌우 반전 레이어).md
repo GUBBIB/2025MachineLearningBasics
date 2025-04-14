@@ -11,7 +11,7 @@ tf.keras.layers.RandomFlip(
 )
 ```
 *****
-- **mode** : 기본값은 좌우 반전을 하는 ``horizontal``이며, 이외에도 ``vertical(상하 반전)``, ``horizontal_and_vertical(좌우, 상하 반전)``이 있다.
+- **mode** : 기본값은 ``horizontal(좌우 반전)``이며, 이외에도 ``vertical(상하 반전)``, ``horizontal_and_vertical(좌우, 상하 반전)``이 있다.
 
 *****
 - **seed** : ``RandomFlip`` 레이어의 결과값은 무작위로 나오지만 **항상 같은 결과가 나오게** 할 수 있는 매개변수이다.<br>

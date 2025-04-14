@@ -154,3 +154,16 @@ Total Epochs: 10
 [RandomRotation()](https://github.com/GUBBIB/MachineLearningBasics_TensorFlow/blob/main/Doc/Layers/RandomRotation().md) : **데이터 증강을 위한 레이어**로 이미지를 **무작위**로 ``회전``시켜 학습 데이터를 다양하게 만든다.
 
 [RandomZoom()](https://github.com/GUBBIB/MachineLearningBasics_TensorFlow/blob/main/Doc/Layers/RandomZoom().md) : 
+
+```python
+data_augmentation = Sequential(
+  [
+    keras.Input(shape=(img_height, img_width, 3)),
+    layers.RandomFlip("horizontal"),
+    layers.RandomRotation(0.1),
+    layers.RandomZoom(0.1),
+  ]
+)
+```
+- 이 모델은 이미지가 들어오면 **무작위**로 ``좌우반전``, ``±18도 범위 내에서 회전``, ``10% 범위 내에서 확대/축소``를 한다.
+
