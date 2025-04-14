@@ -170,8 +170,29 @@ data_augmentation = Sequential(
 ### 드롭아웃
 - **신경망**의 **과대적합(과적합)**을 **방지하기 위한** ``정규화 기법``이다.
 - **드롭아웃 레이어**는 **지정된 확률(rate)**만큼 뉴런을 **차단**한다.
-- 자세한 설명은 [Dropout 레이어 문서]() 에서 확인할 수 있다.
+- 자세한 설명은 [Dropout 레이어 문서](https://github.com/GUBBIB/MachineLearningBasics_TensorFlow/blob/main/Doc/Layers/Dropout(%EB%89%B4%EB%9F%B0%20%EB%9E%9C%EB%8D%A4%20%EC%B0%A8%EB%8B%A8%20%EB%A0%88%EC%9D%B4%EC%96%B4).md) 에서 확인할 수 있다.
 
 ```python
 layers.Dropout(0.5) → 50%의 뉴런을 랜덤하게 차단한다.
 ```
+
+## 모델 재구성
+```python
+model = Sequential([
+  data_augmentation,
+  layers.Rescaling(1./255),
+  layers.Conv2D(16, 3, padding='same', activation='relu'),
+  layers.MaxPooling2D(),
+  layers.Conv2D(32, 3, padding='same', activation='relu'),
+  layers.MaxPooling2D(),
+  layers.Conv2D(64, 3, padding='same', activation='relu'),
+  layers.MaxPooling2D(),
+  layers.Dropout(0.2),
+  layers.Flatten(),
+  layers.Dense(128, activation='relu'),
+  layers.Dense(num_classes, name="outputs")
+])
+```
+- 이전 모델과 달라진 점은 **이미지가 처음 들어올 때**, **데이터 증강 레이어**를 만나면서 ``반전``, ``회전``, ``축소/확대``가 된다는 점과 **마지막에 20%의 랜덤한 뉴런을 차단**한다는 점이다.
+
+## 모델 요약
