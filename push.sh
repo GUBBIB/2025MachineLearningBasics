@@ -2,7 +2,7 @@
 
 GIT_NAME="GUBBIB"
 GIT_EMAIL="moon.dragon250@gmail.com"
-CURRENT_DIR = $(pwd)
+CURRENT_DIR=$(pwd)
 
 echo ---------------------------
 while [ ! -d ".git" ]; do
