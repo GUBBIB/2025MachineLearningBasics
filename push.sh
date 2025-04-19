@@ -22,4 +22,4 @@ git add .
 git commit -m "Upload"
 git push origin main
 
-cd "$CURRENT_DIR"
+cd $CURRENT_DIR
