@@ -49,4 +49,11 @@ cd C:\Windows\System32\myTensorflow
 
 3. jupyter notebook 실행
 jupyter notebook
+
+keras 폴더 위치
+C:\Users\j2256\.keras
+
+myTensorflow 가상머신 폴더 위치
+C:\Windows\System32\myTensorflow
+
 -->
