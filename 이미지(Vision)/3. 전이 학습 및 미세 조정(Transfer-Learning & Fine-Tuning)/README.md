@@ -45,8 +45,24 @@ validation_dataset = validation_dataset.skip(val_batches // 5)
 ```
 - **검증 데이터셋**의 ``20%`` 만큼 들고와서 **테스트 데이터셋**을 생성한다.
 
+### 성능을 높이도록 데이터셋 구성
+```python
+AUTOTUNE = tf.data.AUTOTUNE
 
+train_dataset = train_dataset.prefetch(buffer_size=AUTOTUNE)
+validation_dataset = validation_dataset.prefetch(buffer_size=AUTOTUNE)
+test_dataset = test_dataset.prefetch(buffer_size=AUTOTUNE)
+```
+- [prefetch()](https://github.com/GUBBIB/MachineLearningBasics_TensorFlow/blob/main/Doc/Dataset/Prefetch().md)를 사용해서 모델이 **훈련하는 동안 다음 데이터를 미리 준비**한다.
 
+### 데이터 증강 사용
+```python
+data_augmentation = tf.keras.Sequential([
+  tf.keras.layers.RandomFlip('horizontal'),
+  tf.keras.layers.RandomRotation(0.2),
+])
+```
+- [RandomFlip()](https://github.com/GUBBIB/MachineLearningBasics_TensorFlow/blob/main/Doc/Layers/RandomFlip(%EB%AC%B4%EC%9E%91%EC%9C%84%20%EC%83%81%ED%95%98%2C%20%EC%A2%8C%EC%9A%B0%20%EB%B0%98%EC%A0%84%20%EB%A0%88%EC%9D%B4%EC%96%B4).md), [RandomRotation()](https://github.com/GUBBIB/MachineLearningBasics_TensorFlow/blob/main/Doc/Layers/RandomRotation(%EB%AC%B4%EC%9E%91%EC%9C%84%20%ED%9A%8C%EC%A0%84%20%EB%A0%88%EC%9D%B4%EC%96%B4).md) 을 사용해서 이미지에 대해서 **랜덤하게** ``좌우반전``, ``회전``한다.
 
 
 <!--
