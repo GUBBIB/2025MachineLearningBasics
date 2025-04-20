@@ -64,6 +64,16 @@ data_augmentation = tf.keras.Sequential([
 ```
 - [RandomFlip()](https://github.com/GUBBIB/MachineLearningBasics_TensorFlow/blob/main/Doc/Layers/RandomFlip(%EB%AC%B4%EC%9E%91%EC%9C%84%20%EC%83%81%ED%95%98%2C%20%EC%A2%8C%EC%9A%B0%20%EB%B0%98%EC%A0%84%20%EB%A0%88%EC%9D%B4%EC%96%B4).md), [RandomRotation()](https://github.com/GUBBIB/MachineLearningBasics_TensorFlow/blob/main/Doc/Layers/RandomRotation(%EB%AC%B4%EC%9E%91%EC%9C%84%20%ED%9A%8C%EC%A0%84%20%EB%A0%88%EC%9D%B4%EC%96%B4).md) 을 사용해서 이미지에 대해서 **랜덤하게** ``좌우반전``, ``회전``한다.
 
+## 사전 훈련된 컨볼루션 네트워크로부터 기본 모델 생성
+### MobileNetV2 모델 다운
+```python
+# Create the base model from the pre-trained model MobileNet V2
+IMG_SHAPE = IMG_SIZE + (3,)
+base_model = tf.keras.applications.MobileNetV2(input_shape=IMG_SHAPE,
+                                               include_top=False,
+                                               weights='imagenet')
+```
+
 
 <!--
 특징 추출 = {
