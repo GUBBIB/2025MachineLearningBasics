@@ -21,17 +21,33 @@ _URL = 'https://storage.googleapis.com/mledu-datasets/cats_and_dogs_filtered.zip
 ## 데이터셋 생성
 ### 훈련 데이터셋
 ```python
+# 훈련 데이터셋
 train_dataset = tf.keras.utils.image_dataset_from_directory(train_dir,
                                                             shuffle=True,
                                                             batch_size=BATCH_SIZE,
                                                             image_size=IMG_SIZE)
 ```
+
+### 검증 데이터셋
 ```python
+# 검증 데이터셋
 validation_dataset = tf.keras.utils.image_dataset_from_directory(validation_dir,
                                                                  shuffle=True,
                                                                  batch_size=BATCH_SIZE,
                                                                  image_size=IMG_SIZE)
 ```
+
+### 테스트 데이터셋 
+```python
+val_batches = tf.data.experimental.cardinality(validation_dataset)
+test_dataset = validation_dataset.take(val_batches // 5)
+validation_dataset = validation_dataset.skip(val_batches // 5)
+```
+- **검증 데이터셋**의 ``20%`` 만큼 들고와서 **테스트 데이터셋**을 생성한다.
+
+
+
+
 
 <!--
 특징 추출 = {
