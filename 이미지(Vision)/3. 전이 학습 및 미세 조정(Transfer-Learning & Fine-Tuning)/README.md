@@ -1,11 +1,37 @@
 # 코드 설명
 
-## 전이학습 및 미세 조정이란
-### 전이학습
+## 챕터 설명
+### 전이학습 및 미세 조정이란
+#### 전이학습
 - **전이학습**이란 **이미 학습된 모델**을 가져다 **새로운 문제에 활용**하는 것을 말한다.
 
-### 미세조정
+#### 미세조정
 - 가져온 모델의 **일부 층**을 **조금 더 학습시켜서 조정**하는 것을 말한다.
+
+### 이 챕터에서는..
+- 이 챕터에서는 **이미 학습된 모델(``MobileNetV2``)** 을 가져와 **미세조정**을 하여 ``개``와 ``고양이``를 구분하는 모델을 생성한다.
+
+
+## 데이터셋 다운로드
+```python
+_URL = 'https://storage.googleapis.com/mledu-datasets/cats_and_dogs_filtered.zip'
+```
+- 경로를 통해서 개와 고양이 데이터 이미지를 다운로드 한다.
+
+## 데이터셋 생성
+### 훈련 데이터셋
+```python
+train_dataset = tf.keras.utils.image_dataset_from_directory(train_dir,
+                                                            shuffle=True,
+                                                            batch_size=BATCH_SIZE,
+                                                            image_size=IMG_SIZE)
+```
+```python
+validation_dataset = tf.keras.utils.image_dataset_from_directory(validation_dir,
+                                                                 shuffle=True,
+                                                                 batch_size=BATCH_SIZE,
+                                                                 image_size=IMG_SIZE)
+```
 
 <!--
 특징 추출 = {
